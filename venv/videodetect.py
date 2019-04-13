@@ -8,7 +8,7 @@ detector.setModelTypeAsYOLOv3()
 detector.setModelPath( os.path.join(execution_path , "yolo.h5"))
 detector.loadModel()
 
-video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "traffic.mp4"),
+video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "Traffic.mp4"),
                                              output_file_path=os.path.join(execution_path, "traffic_detected"),
-                                             frames_per_second=20, log_progress=True)
+                                             frames_per_second=30, log_progress=True)#defalt frame = 20
 print(video_path)
