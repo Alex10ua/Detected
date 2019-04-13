@@ -11,5 +11,8 @@ detector.setModelPath(os.path.join(exac_path, "resnet50_coco_best_v2.0.1.h5")) #
 detector.loadModel()# її завантаження
 
 list=detector.detectObjectsFromImage(input_image=os.path.join(exac_path,"object2.jpg"), #надаємо методу зобразення
-                                     output_image_path=os.path.join(exac_path,"Detected_objects.jpg") #видає проаналізоване зображення
+                                     output_image_path=os.path.join(exac_path,"Detected_objects.jpg"), #видає проаналізоване зображення
+                                     minimum_percentage_probability=30,# min perent for detect
+                                     display_percentage_probability=True,# відображення процентів на вихідній картинці
+                                     display_object_name=True #відображення імені об єкту
                                      )
